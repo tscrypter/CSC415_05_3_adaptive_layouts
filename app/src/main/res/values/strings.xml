@@ -18,6 +18,12 @@
     <string name="title_placeholder">Title</string>
     <string name="news_placeholder">News</string>
     <string name="sports_info_placeholder">Here is some news</string>
+    <string name="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed convallis augue.
+        Donec at dignissim est. Duis nec tincidunt erat, quis placerat purus. Curabitur ultrices congue porta. Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. Mauris id metus augue. Curabitur id ipsum et dui venenatis
+        convallis eu vitae diam. Nam semper ornare luctus. Pellentesque quis lorem commodo, feugiat ex at, sodales
+        neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </string>
 
     <string-array name="sports_titles">
         <item>Baseball</item>
