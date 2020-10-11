@@ -1,4 +1,4 @@
-Material Me! Sample App (Starter Code)
+# CSC415_05_2_cards_and_colors
 ============
 
 This is the starter code for the practical on Material Design in the Android
