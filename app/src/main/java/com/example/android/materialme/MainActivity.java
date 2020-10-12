@@ -21,6 +21,7 @@ import android.os.Bundle;
 import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -55,10 +56,19 @@ public class MainActivity extends AppCompatActivity {
         //Initialize the adapter and set it ot the RecyclerView
         mAdapter = new SportsAdapter(this, mSportsData);
         mRecyclerView.setAdapter(mAdapter);
+        int gridColumnCount = getResources().getInteger(R.integer.grid_column_count);
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this, gridColumnCount));
+
+        int swipeDirs;
+        if(gridColumnCount > 1) {
+            swipeDirs = 0;
+        } else {
+            swipeDirs = ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT;
+        }
 
         ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(
                 ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT | ItemTouchHelper.UP | ItemTouchHelper.DOWN,
-                ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+                swipeDirs) {
             @Override
             public boolean onMove(
                     @NonNull RecyclerView recyclerView,
