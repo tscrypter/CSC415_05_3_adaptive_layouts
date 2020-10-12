@@ -1,4 +1,4 @@
-# CSC415_05_2_cards_and_colors
+# CSC415_05_3_adaptive_layouts
 ============
 
 This is the starter code for the practical on Material Design in the Android
